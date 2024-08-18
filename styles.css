@@ -1,0 +1,230 @@
+
+
+
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #fff; /* White background for a clean look */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #ff6f61, #ff6f61); /* Gradient from your preferred color */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #fff;
+    color: #ff6f61;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #ff6f61;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+/* Quotes Section */
+.quotes-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f8f8;
+}
+
+.quote-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto; /* Center the carousel */
+    max-width: 600px; /* Limit the width for better alignment */
+}
+
+.quote {
+    background: #ff9a8b; /* Complementary color for quotes */
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Set max-width for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.quote.active {
+    background: #ff6f61; /* Highlight the active quote */
+    color: #fff;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background: #fff; /* White background for gallery */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo {
+    overflow: hidden; /* Hide overflow to maintain uniform size */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniform size */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Closing Section */
+.closing {
+    padding: 50px 20px;
+    text-align: center;
+    background: #ff6f61;
+    color: white;
+}
+
+.closing p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Surprise Box */
+.surprise-box {
+    cursor: pointer;
+    background: #ff9a8b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.surprise-box.revealed {
+    background: #ff6f61;
+    color: #fff;
+}
+
+.surprise-box p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .button {
+        font-size: 1em;
+    }
+
+    .quote {
+        width: 90%;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Surprise Section */
+.surprise {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9; /* Light background color */
+}
+
+.surprise h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff6f61; /* Use the provided color */
+}
+
+.surprise-box {
+    display: inline-block;
+    padding: 20px;
+    background: #ff6f61; /* Use the provided color */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.surprise-box:hover {
+    background: #ff4c4c; /* Slightly darker shade for hover effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise-message {
+    padding: 20px;
+    background: #fff;
+    color: #333;
+    border: 2px solid #f55a4c; /* Border with the provided color */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#surprise-message.show {
+    display: block;
+    opacity: 1;
+}
+
+
